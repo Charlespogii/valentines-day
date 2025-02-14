@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'fontto';
+    src: url('fontto.ttf') format('truetype');
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-image: url(images/pic2.png);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'fontto', sans-serif;
+    color: black;
+    font-size: 50px;
+    margin-top: -10px;
+}
+
+.images-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 50px;
+    width: 900px;
+    height: 550px;
+    background-color: rgba(255, 0, 0, 0.5);
+    position: relative;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    margin-top: -20px;
+    perspective: 1000px;
+}
+
+.image-card {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+.image-card.clicked {
+    transform: rotateY(180deg);
+}
+
+.image-card .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* The back side with the message */
+.image-card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid pink;
+    border-radius: 10px;
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute; 
+    left: 50px;
+    top: 60px;
+    transform: translateY(-50%);
+}
+
+.button1 {
+    width: 150px;
+    height: 50px;
+    border-radius: 100px; 
+    border: 2px solid pink;
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white; 
+    font-size: 16px;
+    cursor: pointer; 
+}
+
+.button1:hover{
+    background-color: rgba(255, 105, 180, 0.5);
+}

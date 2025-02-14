@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'fontto';
+    src: url('fontto.ttf') format('truetype');
+}
+
+body {
+    font-family:'fontto', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    background-image: url(images/pic2.png);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    color: white;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 50px;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.image1 {
+    margin-top: -50px;
+    width: 200px;
+    height: auto;
+}
